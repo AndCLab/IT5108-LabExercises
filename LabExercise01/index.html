@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lab Exercise 01: Labendia</title>
+		<link rel="stylesheet" type="text/css" href="mystyle.css">
+		<script>
+			function addListItem() {
+    			var li = document.createElement('li');
+    			var inputValue = document.getElementById('task').value;
+    			var t = document.createTextNode(inputValue);
+    			li.appendChild(t);
+    			if (inputValue === '') {
+      				alert("You must write something!");
+    			} else {
+      				document.getElementById('task_list').appendChild(li);
+    			}
+    			document.getElementById("task_list").value = "";
+			}
+		</script>
+	</head>
+	<body>
+		<h1>To Do List</h1>
+		<input type="text" id="task" placeholder="Enter a task...">
+		<input type="button" onclick="addListItem()" value="Add">
+
+			<ul id="task_list">
+				<li>Pay bills</li>
+				<li>Read a book</li>
+				<li>Meet Anna</li>
+				<li>Wash dishes</li>
+			</ul>
+	</body>
+</html>
